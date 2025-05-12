@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Table Page</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktable.css">
+</head>
+<body>
+     <header class="navbar">
+        <div class="logo-container">
+          <img src="image/logo.svg" alt="Image not found" class="logo" />
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="booktable.html" class="book-btn">Book Table</a>
+        </nav>
+      </header>
+
+       <div class="form-container">
+    <h1>Book Table</h1>
+    <form action="#" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="tableType">Table Type</label>
+          <select id="tableType" name="tableType" required>
+            <option value="">Choose</option>
+            <option value="2-seat">2 Seat</option>
+            <option value="4-seat">4 Seat</option>
+            <option value="6-seat">6 Seat</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="guestNumber">Guest Number</label>
+          <input type="number" id="guestNumber" name="guestNumber" required />
+        </div>
+        <div class="form-group">
+          <label for="placement">Placement</label>
+          <select id="placement" name="placement" required>
+            <option value="">Choose</option>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+            <option value="rooftop">Rooftop</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" required />
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="note">Note</label>
+        <textarea id="note" name="note" rows="4"></textarea>
+      </div>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+       <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h2 class="logo"><i class="fas fa-wine-glass-alt"></i> Shaif’s Cuisine</h2>
+            <p>Fresh and delicious traditional Bangladeshi food to delight the whole family.</p>
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <img src="image/facebook.svg" alt="Image not found">
+              <img src="image/instagram.png" alt="Image not found">
+              <img src="image/twitter.png" alt="Image not found">
+            </div>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Book Table</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li>+880123</li>
+              <li>webcifar@gmail.com</li>
+              <li>GEC Circle, Chittagong, Bangladesh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © copyright 2021 Shaif’s Cuisine | All rights reserved
+        </div>
+      </footer>
+      
+</body>
+</html>
