@@ -1,24 +1,46 @@
+:root {
+  --primary-color: #176a4c;
+  --accent-color: #2e7d32;
+  --bg-light: #f2f9f1;
+  --card-bg: #dceee3;
+  --card-bg-alt: #dbeee0;
+  --text-dark: #2f2f2f;
+  --text-light: #444;
+  --radius: 15px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --font: 'Segoe UI', sans-serif;
+}
+
+/* General Reset */
+body {
+  font-family: var(--font);
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu Section */
 .menu-section {
-  background-color: #f2f9f1;
+  background-color: var(--bg-light);
   padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
   text-align: center;
 }
 
 .menu-title {
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #2f2f2f;
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .menu-subtitle {
-  font-size: 1.375rem; /* 22px */
+  font-size: 1.375rem;
   font-weight: 500;
-  color: #444;
+  color: var(--text-light);
   margin-bottom: 30px;
 }
 
+/* Specials */
 .specials-container {
   display: flex;
   justify-content: center;
@@ -27,17 +49,22 @@
 }
 
 .special-card {
-  background-color: #dceee3;
+  background-color: var(--card-bg);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: var(--radius);
   max-width: 500px;
   width: 100%;
-  height: auto;
   gap: 20px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.special-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .special-card img {
@@ -45,34 +72,40 @@
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
-  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.special-card:hover img {
+  transform: scale(1.03);
 }
 
 .card-info h3 {
-  font-size: 1.375rem; /* 22px */
-  margin: 0 0 10px 0;
-  color: #2f2f2f;
+  font-size: 1.375rem;
+  margin: 0 0 10px;
+  color: var(--text-dark);
 }
 
 .price {
-  color: #176a4c;
-  font-size: 1.125rem; /* 18px */
+  color: var(--primary-color);
+  font-size: 1.125rem;
   font-weight: bold;
   margin: 5px 0;
 }
 
 .stars {
   font-size: 1rem;
-  color: #176a4c;
+  color: var(--primary-color);
 }
 
+/* Headings */
 .container h1 {
   font-size: 2rem;
-  color: #333;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  color: var(--text-dark);
+  margin: 40px 0 20px;
+  text-align: center;
 }
 
+/* Card Grid */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -80,15 +113,21 @@
   justify-content: center;
 }
 
+/* Meal Cards */
 .card {
   display: flex;
   flex-direction: row;
-  background-color: #dbeee0;
+  background-color: var(--card-bg-alt);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   width: 340px;
   padding: 15px;
   align-items: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
@@ -102,44 +141,48 @@
 .card-content h2 {
   font-size: 1.3rem;
   margin: 0;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .card-content .price {
   font-size: 1.1rem;
-  color: #197c53;
+  color: var(--primary-color);
   margin: 5px 0;
 }
 
 .card-content .stars {
-  color: #2e7d32;
+  color: var(--accent-color);
   font-size: 1rem;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .special-card {
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    height: auto;
+    align-items: center;
+    text-align: center;
   }
 
   .special-card img {
     width: 100%;
+    max-width: 280px;
     height: auto;
-    max-width: 300px;
   }
 
   .card {
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
+    text-align: center;
   }
 
   .card img {
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+  }
+
+  .card-content {
+    padding: 0;
   }
 }
 
@@ -152,14 +195,16 @@
     font-size: 1.1rem;
   }
 
-  .special-card img,
-  .card img {
-    max-width: 100%;
-    height: auto;
+  .special-card,
+  .card {
+    padding: 15px;
   }
 
-  .card,
-  .special-card {
-    padding: 15px;
+  .card-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
   }
 }
